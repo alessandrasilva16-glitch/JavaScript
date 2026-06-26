@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    background:#71bdde;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.game{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.city{
+    position:absolute;
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:auto;
+
+    object-fit:contain;
+}
+
+.Homer{
+    width:200px;
+    position:absolute;
+    bottom:20px;
+    left:60px;
+}
+
+.Donuts{
+    width:60px;
+    position:absolute;
+    bottom:20px;
+    right:-80px;
+
+    animation:donut 2s infinite linear;
+}
+
+.info{
+    position:absolute;
+    top:15px;
+    left:15px;
+    z-index:10;
+
+    color:#fff;
+    text-shadow:2px 2px 5px black;
+}
+
+.game-over{
+
+    visibility:hidden;
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.7);
+}
+
+.painel{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    text-align:center;
+}
+
+.reiniciar{
+
+    margin-top:20px;
+
+    width:180px;
+    height:50px;
+
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+.pulo{
+    animation:pular .5s ease-out;
+}
+
+@keyframes donut{
+
+    from{
+        right:-80px;
+    }
+
+    to{
+        right:100%;
+    }
+
+}
+
+@keyframes pular{
+
+    0%{
+        bottom:20px;
+    }
+
+    40%{
+        bottom:170px;
+    }
+
+    50%{
+        bottom:170px;
+    }
+
+    60%{
+        bottom:170px;
+    }
+
+    100%{
+        bottom:20px;
+    }
+
+}
